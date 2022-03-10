@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "outDir": "build",
+        "jsx": "react",
+        "declaration": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "noImplicitThis": true,
+        "lib": ["es6", "dom"],
+        "esModuleInterop": true
+    }
+}
