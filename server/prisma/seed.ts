@@ -6,6 +6,9 @@ const prisma = new PrismaClient();
 //run the seed use CLI command: npx prisma db seed
 
 async function main() {
+    //delete following line before production:
+    await prisma.collection.deleteMany({});
+
     for (let collection of collections) {
         await prisma.collection.create({
             data: collection,

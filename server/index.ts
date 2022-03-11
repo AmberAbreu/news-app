@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 
 app.use(express.json());
 
-const collections = require("./routes/collections");
+const routes = require("./routes/index.ts");
 
-app.use("/api", collections);
+app.use("/api", routes);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () =>

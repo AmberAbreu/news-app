@@ -14,10 +14,17 @@ datasource db {
 
 model Collection {
   id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
   title     String   @db.VarChar(255)
   description   String?
+  stories Story[]
+}
+
+model Story {
+  id        Int      @id @default(autoincrement())
+  title     String
+  link      String
+  collection   Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  collectionId Int
 }
 
 //npx prisma migrate dev --name init
