@@ -4,7 +4,8 @@
     "description": "",
     "main": "server/index.ts",
     "prisma": {
-        "schema": "server/prisma/schema.prisma"
+        "schema": "server/prisma/schema.prisma",
+        "seed": "ts-node server/prisma/seed.ts"
     },
     "scripts": {
         "start": "npx ts-node server/index.ts",
